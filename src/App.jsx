@@ -35,7 +35,7 @@ const Home = ({ onSubmit, result }) => (
             Discover luxurious properties tailored to your lifestyle.
           </p>
           <a
-            className="bg-red-600 hover:bg-red-700 px-6 py-3 rounded-lg text-white text-lg transition duration-300"
+            className="bg-red-600 border  hover:bg-white hover:text-red-600 hover:border-red-500 px-6 py-3 rounded-lg text-white text-lg transition duration-300"
             href="#form"
           >
             View Listings
@@ -104,7 +104,7 @@ const Home = ({ onSubmit, result }) => (
 
             <button
               type="submit"
-              className="px-4 py-2 border bg-blue-500 hover:bg-white hover:text-black hover:border-blue-500 mb-8 rounded text-white w-1/4 mx-auto text-center lg:text-lg text-[10px]"
+              className="px-4 py-2 border bg-red-500 hover:bg-white hover:text-black hover:border-red-500 mb-8 rounded text-white w-1/4 mx-auto text-center lg:text-lg text-[10px]"
             >
               Submit
             </button>
@@ -194,12 +194,12 @@ const PrivacyPolicy = () => (
     <div className="p-6 lg:p-16">
       <div className="lg:p-10 border border-black p-4 space-y-6">
         <p className="text-sm text-[#555555] lg:text-base">
-          At Rentduniya.com, we respect your privacy and are committed to
+          At Propcodes.com, we respect your privacy and are committed to
           protecting the personal information of all our users, including
           brokers, builders, owners, and potential buyers or renters
           (collectively referred to as "Users"). This Privacy Policy outlines
           how we collect, use, disclose, and safeguard your personal information
-          when you access and use our website, Rentduniya.com, and related
+          when you access and use our website, Propcodes.com, and related
           services (the "Platform").
         </p>
         <p className="text-sm text-[#555555] lg:text-base">
@@ -345,7 +345,7 @@ const PrivacyPolicy = () => (
 
         <h2 className="font-bold text-xl t[#fb0103] mt-6">5. Your Rights</h2>
         <p className="text-sm text-[#555555] lg:text-base">
-          As a user of Rentduniya.com, you have the following rights concerning
+          As a user of Propcodes.com, you have the following rights concerning
           your personal data:
         </p>
         <ul className="list-disc list-inside ml-4">
@@ -408,7 +408,7 @@ const PrivacyPolicy = () => (
         <h2 className="font-bold text-xl t[#fb0103] mt-6">10. Contact Us</h2>
         <p className="text-sm text-[#555555] lg:text-base">
           If you have any questions, concerns, or requests related to this
-          Privacy Policy, please contact us at: info@Rentduniya.com
+          Privacy Policy, please contact us at: info@propcodes.com
         </p>
       </div>
     </div>
@@ -712,12 +712,12 @@ const App = () => {
               <Link to="/">
                 <img
                   src="https://rentdunia.com/assets/logo-DZjJr9hy.png"
-                  className="h-16"
+                  className="h-12 md:h-16" // Smaller logo on mobile (h-12)
                   alt="Rent Duniya Logo"
                 />
               </Link>
             </div>
-            <nav>
+            <nav className="hidden md:block">
               <ul className="flex space-x-4">
                 <li>
                   <a href="/" className="text-blue-600 hover:text-blue-800">
