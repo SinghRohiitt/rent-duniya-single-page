@@ -158,34 +158,7 @@ const Gallery = ({ images }) => (
 );
 
 const Testimonials = () => (
-  <section className="py-16 bg-gray-100" id="testimonials">
-    <div className="container mx-auto px-4 text-center">
-      <h2 className="text-3xl font-bold mb-12">What Our Clients Say</h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div className="bg-white shadow-lg rounded-lg p-6">
-          <p className="text-gray-600 mb-4">
-            "The service and properties offered by RealEstatePro exceeded my
-            expectations. I found my dream home!"
-          </p>
-          <p className="font-bold text-blue-600">— Sarah Johnson</p>
-        </div>
-        <div className="bg-white shadow-lg rounded-lg p-6">
-          <p className="text-gray-600 mb-4">
-            "I highly recommend RealEstatePro for anyone looking for luxury
-            properties. Their team was professional and helpful!"
-          </p>
-          <p className="font-bold text-blue-600">— Michael Smith</p>
-        </div>
-        <div className="bg-white shadow-lg rounded-lg p-6">
-          <p className="text-gray-600 mb-4">
-            "RealEstatePro made the home buying process so easy. I found exactly
-            what I was looking for in no time!"
-          </p>
-          <p className="font-bold text-blue-600">— Emma Davis</p>
-        </div>
-      </div>
-    </div>
-  </section>
+  <section className=" bg-gray-100" id="testimonials"></section>
 );
 
 const PrivacyPolicy = () => (
