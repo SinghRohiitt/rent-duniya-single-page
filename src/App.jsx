@@ -9,18 +9,22 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { message } from "antd";
-import img1 from "./assets/Folder/20241004_153838.JPG";
 import img2 from "./assets/Folder/20241004_153850.JPG";
-import img3 from "./assets/Folder/20241004_153904.JPG";
-import img4 from "./assets/Folder/20241004_153922.JPG";
 import img5 from "./assets/Folder/20241004_153926.JPG";
 import img6 from "./assets/Folder/20241004_153942.JPG";
 import img7 from "./assets/Folder/20241004_153951.JPG";
 import img8 from "./assets/Folder/20241004_154002.JPG";
 import img9 from "./assets/Folder/20241004_154034.JPG";
-import img10 from "./assets/Folder/20241004_154047.JPG";
 import img11 from "./assets/Folder/20241004_154101.JPG";
-import img12 from "./assets/Folder/20241004_154108.JPG";
+import img13 from "./assets/Folder/1.jpeg";
+import img14 from "./assets/Folder/2.jpeg";
+import img15 from "./assets/Folder/3.jpeg";
+import img16 from "./assets/Folder/4.jpeg";
+import img17 from "./assets/Folder/5.jpeg";
+import img18 from "./assets/Folder/6.jpeg";
+import img19 from "./assets/Folder/7.jpeg";
+import img20 from "./assets/Folder/8.jpeg";
+import img22 from "./assets/Folder/10.jpeg";
 
 const Home = ({ onSubmit, result }) => (
   <>
@@ -632,18 +636,21 @@ const Disclaimer = () => (
 
 const App = () => {
   const images = [
-    { img: img1, name: "FULL FURNISHED" },
     { img: img2, name: "Modern Living Room" },
-    { img: img3, name: "Spacious Bedroom" },
-    { img: img4, name: "Elegant Kitchen" },
-    { img: img5, name: "Luxury Bathroom" },
+    { img: img14, name: "Bed Room" },
+    { img: img15, name: "Kitchen" },
     { img: img6, name: "Cozy Study" },
-    { img: img7, name: "Balcony View" },
-    { img: img8, name: "Dining Area" },
-    { img: img9, name: "Master Suite" },
-    { img: img10, name: "Guest Room" },
-    { img: img11, name: "Home Office" },
-    { img: img12, name: "Entertainment Zone" },
+    { img: img7, name: "Bed Room" },
+    { img: img20, name: "Living Room" },
+    { img: img17, name: "Bed Room" },
+    { img: img18, name: "Bath Room" },
+    { img: img13, name: "Wash Room" },
+    { img: img16, name: "Guest Room" },
+    { img: img19, name: "kitchen" },
+    { img: img9, name: "Washroom" },
+    { img: img11, name: "Bed Room" },
+    { img: img5, name: "Living Room" },
+    { img: img22, name: "Bed Room" },
   ];
 
   const [result, setResult] = React.useState("");
@@ -684,13 +691,13 @@ const App = () => {
             <div className="text-2xl font-bold">
               <Link to="/">
                 <img
-                  src="https://rentdunia.com/assets/logo-DZjJr9hy.png"
-                  className="h-12 md:h-16" // Smaller logo on mobile (h-12)
+                  src="https://test.rentdunia.com/assets/logo-DZjJr9hy.png"
+                  className="h-8 md:h-12" // Smaller logo on mobile (h-12)
                   alt="Rent Duniya Logo"
                 />
               </Link>
             </div>
-            <nav className="hidden md:block">
+            {/* <nav className="hidden md:block">
               <ul className="flex space-x-4">
                 <li>
                   <a href="/" className="text-blue-600 hover:text-blue-800">
@@ -714,7 +721,7 @@ const App = () => {
                   </a>
                 </li>
               </ul>
-            </nav>
+            </nav> */}
           </div>
         </header>
 
