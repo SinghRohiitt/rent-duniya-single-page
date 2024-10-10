@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
+import Kard from "./assets/kard/Kard";
 import {
   Carousel,
   CarouselContent,
@@ -25,6 +26,12 @@ import img18 from "./assets/Folder/6.jpeg";
 import img19 from "./assets/Folder/7.jpeg";
 import img20 from "./assets/Folder/8.jpeg";
 import img22 from "./assets/Folder/10.jpeg";
+import img23 from "./assets/Folder/pg1 (1).jpg";
+import img24 from "./assets/Folder/pg2.jpg";
+import img25 from "./assets/Folder/pg3.jpg";
+import img26 from "./assets/Folder/pg4.jpg";
+
+import { useRef } from "react";
 
 const Home = ({ onSubmit, result }) => (
   <>
@@ -54,9 +61,10 @@ const Home = ({ onSubmit, result }) => (
       id="form"
     >
       <div>
-        <h3 className="py-8 text-center font-bold text-3xl text-white">
+        <h3 className="py-4 text-center font-bold text-3xl text-black">
           Struggling to find your perfect home?
         </h3>
+        <div className="mb-12 w-1/4 h-1 bg-red-500 mx-auto"> </div>
         <div className="lg:w-[50%] w-[90%] mx-auto shadow-lg bg-stone-100 rounded-lg">
           <img
             src="https://images.pexels.com/photos/3646913/pexels-photo-3646913.jpeg?auto=compress&cs=tinysrgb&w=2000"
@@ -99,7 +107,7 @@ const Home = ({ onSubmit, result }) => (
               className="p-2"
             />
 
-            <label>Looking For</label>
+            <label>Looking For/Location</label>
             <textarea
               name="message"
               required
@@ -122,9 +130,10 @@ const Home = ({ onSubmit, result }) => (
 
 const Gallery = ({ images }) => (
   <section className="bg-stone-100 py-32" id="gallery">
-    <h2 className="text-3xl font-bold mb-12 text-center">
+    <h2 className="text-3xl font-bold mb-2 text-center">
       Our Property Gallery
     </h2>
+    <div className="mb-12 w-1/12 h-1 bg-red-500 mx-auto"> </div>
     <div className="w-[80%] shadow-lg mx-auto">
       <Carousel
         opts={{
@@ -682,6 +691,49 @@ const App = () => {
     }
   };
 
+  const carouselRef = useRef(null);
+
+  const scrollLeft = () => {
+    carouselRef.current.scrollBy({
+      left: -300, // Adjust based on card width
+      behavior: "smooth",
+    });
+  };
+
+  const scrollRight = () => {
+    carouselRef.current.scrollBy({
+      left: 300, // Adjust based on card width
+      behavior: "smooth",
+    });
+  };
+
+  const listings = [
+    {
+      image: img23, // Replace with actual image path
+      title: "SR Homes (For Girls)",
+      location: "Sector 27, Gurgaon",
+      price: "₹ 12,500",
+    },
+    {
+      image: img24,
+      title: "Corporate Girls PG",
+      location: "Sector 23 A, Gurgaon",
+      price: "₹ 8,500",
+    },
+    {
+      image: img25,
+      title: "Corporate Girls pg",
+      location: "Sector 39, Gurgaon",
+      price: "₹ 12,500",
+    },
+    {
+      image: img26,
+      title: "Luxury PG for Women",
+      location: "Sector 45, Gurgaon",
+      price: "₹ 15,000",
+    },
+  ];
+
   return (
     <Router>
       <div>
@@ -697,17 +749,20 @@ const App = () => {
                 />
               </Link>
             </div>
-            {/* <nav className="hidden md:block">
+            <nav className="hidden md:block">
               <ul className="flex space-x-4">
                 <li>
-                  <a href="/" className="text-blue-600 hover:text-blue-800">
+                  <a
+                    href="/"
+                    className="text-blue-600 font-bold hover:text-blue-800"
+                  >
                     Home
                   </a>
                 </li>
                 <li>
                   <a
                     href="#gallery"
-                    className="text-blue-600 hover:text-blue-800"
+                    className="text-blue-600 font-bold hover:text-blue-800"
                   >
                     Gallery
                   </a>
@@ -715,13 +770,13 @@ const App = () => {
                 <li>
                   <a
                     href="#testimonials"
-                    className="text-blue-600 hover:text-blue-800"
+                    className="text-blue-600 font-bold hover:text-blue-800"
                   >
                     Testimonials
                   </a>
                 </li>
               </ul>
-            </nav> */}
+            </nav>
           </div>
         </header>
 
@@ -735,7 +790,48 @@ const App = () => {
                   <div id="home">
                     <Home onSubmit={onSubmit} result={result} />
                   </div>
+                  <div className="relative w-[80%] mx-auto  pt-16 ">
+                    {/* Left Arrow */}
+                    <button
+                      className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-900 text-white p-2 rounded-full z-10"
+                      onClick={scrollLeft}
+                    >
+                      &#8249;
+                    </button>
+
+                    {/* Carousel Container */}
+                    <h3 className="text-center text-3xl font-bold">
+                      Gurgoan PG Rental With 24/7 Facilities - Perfect for you
+                    </h3>
+                    <div className="w-1/4 h-1 mt-4 mx-auto bg-red-500"></div>
+                    <div
+                      className="flex space-x-4 overflow-x-auto scrollbar-hide scroll-smooth my-16"
+                      ref={carouselRef}
+                    >
+                      {listings.map((listing, index) => (
+                        <div key={index} className="flex-shrink-0 w-80">
+                          {" "}
+                          {/* Adjust width as needed */}
+                          <Kard
+                            image={listing.image}
+                            title={listing.title}
+                            location={listing.location}
+                            price={listing.price}
+                          />
+                        </div>
+                      ))}
+                    </div>
+
+                    {/* Right Arrow */}
+                    <button
+                      className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-900 text-white p-2 rounded-full z-10"
+                      onClick={scrollRight}
+                    >
+                      &#8250;
+                    </button>
+                  </div>
                   <Gallery images={images} />
+
                   <Testimonials />
                 </>
               }
