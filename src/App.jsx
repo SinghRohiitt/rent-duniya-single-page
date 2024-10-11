@@ -853,7 +853,22 @@ const App = () => {
                 Rent Duniya
               </Link>
             </div>
-            <div className="flex flex-row gap-4 justify-center">
+            <div className="flex flex-col gap-2 justify-center">
+              <Link to="/" className="cursor-pointer">
+                Office no. 412, Vipul Business Park, Sector 48, Gurugram,
+                Haryana, 122001
+              </Link>
+              <div className="flex flex-row gap-2 justify-center">
+                <Link to="/" className="cursor-pointer">
+                  7800677500
+                </Link>
+                |
+                <Link to="/" className="cursor-pointer">
+                  contact.rentduniya@gmail.com
+                </Link>
+              </div>
+            </div>
+            <div className="flex flex-row gap-2 pt-4 justify-center">
               <Link to="/privacy-policy" className="cursor-pointer">
                 Privacy Policy
               </Link>
