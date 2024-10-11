@@ -47,9 +47,9 @@ const Home = ({ onSubmit, result }) => (
           </p>
           <a
             className="bg-red-600 border  hover:bg-white hover:text-red-600 hover:border-red-500 px-6 py-3 rounded-lg text-white text-lg transition duration-300"
-            href="#form"
+            href="tel:7800677500"
           >
-            View Listings
+            Call Us
           </a>
         </div>
       </div>
@@ -855,17 +855,18 @@ const App = () => {
             </div>
             <div className="flex flex-col gap-2 justify-center">
               <Link to="/" className="cursor-pointer">
+                <span className="mr-1">Address: </span>
                 Office no. 412, Vipul Business Park, Sector 48, Gurugram,
                 Haryana, 122001
               </Link>
               <div className="flex flex-row gap-2 justify-center">
+                <span className="mr-1">Contact Us: </span>
                 <Link to="/" className="cursor-pointer">
-                  7800677500
+                  +91 7800677500
                 </Link>
-                |
-                <Link to="/" className="cursor-pointer">
+                {/* <Link to="/" className="cursor-pointer">
                   contact.rentduniya@gmail.com
-                </Link>
+                </Link> */}
               </div>
             </div>
             <div className="flex flex-row gap-2 pt-4 justify-center">
