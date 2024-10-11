@@ -846,7 +846,7 @@ const App = () => {
         </main>
 
         {/* Footer */}
-        <footer className="bg-gray-800 text-gray-400 py-12">
+        <footer className="bg-gray-800 text-gray-400 pt-12 pb-6">
           <div className="container mx-auto text-center">
             <div className="mb-6">
               <Link to="/" className="text-white text-2xl font-bold">
@@ -859,7 +859,7 @@ const App = () => {
                 Office no. 412, Vipul Business Park, Sector 48, Gurugram,
                 Haryana, 122001
               </Link>
-              <div className="flex flex-row gap-2 justify-center">
+              <div className="flex flex-row  justify-center">
                 <span className="mr-1">Contact Us: </span>
                 <Link to="/" className="cursor-pointer">
                   +91 7800677500
@@ -869,7 +869,7 @@ const App = () => {
                 </Link> */}
               </div>
             </div>
-            <div className="flex flex-row gap-2 pt-4 justify-center">
+            <div className="flex flex-row gap-2 pt-2 justify-center">
               <Link to="/privacy-policy" className="cursor-pointer">
                 Privacy Policy
               </Link>
@@ -882,7 +882,7 @@ const App = () => {
                 Disclaimer
               </Link>
             </div>
-            <p className="mt-6">
+            <p className="mt-4">
               &copy; 2024 Rent Duniya . All Rights Reserved.
             </p>
           </div>
