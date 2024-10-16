@@ -84,6 +84,14 @@ const Home = ({ onSubmit, result }) => (
                 <option value="4-bhk">4-bhk</option>
                 <option value="5-bhk">5-bhk</option>
               </select>
+              <select name="rent" id="rent" required className="px-4 py-2">
+                <option value="">Looking Space</option>
+                <option value="1-bhk">1-bhk</option>
+                <option value="2-bhk">2-bhk</option>
+                <option value="3-bhk">3-bhk</option>
+                <option value="4-bhk">4-bhk</option>
+                <option value="5-bhk">5-bhk</option>
+              </select>
               <select name="pg" id="pg" required className="px-4 py-2">
                 <option value="">PG</option>
                 <option value="Private-room">Private-room</option>
@@ -743,7 +751,7 @@ const App = () => {
             <div className="text-2xl font-bold">
               <Link to="/">
                 <img
-                  src="https://test.rentdunia.com/assets/logo-DZjJr9hy.png"
+                  src="https://www.rentduniya.com/assets/logo-z59io__-.png"
                   className="h-8 md:h-12" // Smaller logo on mobile (h-12)
                   alt="Rent Duniya Logo"
                 />
