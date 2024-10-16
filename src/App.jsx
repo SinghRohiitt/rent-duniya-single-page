@@ -30,8 +30,13 @@ import img23 from "./assets/Folder/pg1 (1).jpg";
 import img24 from "./assets/Folder/pg2.jpg";
 import img25 from "./assets/Folder/pg3.jpg";
 import img26 from "./assets/Folder/pg4.jpg";
+import img35 from "./assets/Folder/Ambience-creassions.jpg";
+import img36 from "./assets/Folder/Silver-glades-ggn.jpg";
+import img37 from "./assets/Folder/orchid-sec-35.jpg";
+import img38 from "./assets/Folder/flower-valley.jpg";
 
 import { useRef } from "react";
+import Kard2 from "./assets/kard2/Kard2";
 
 const Home = ({ onSubmit, result }) => (
   <>
@@ -76,7 +81,7 @@ const Home = ({ onSubmit, result }) => (
             className="flex flex-col w-[80%] mx-auto gap-3 my-2"
           >
             <div className="flex gap-2 justify-between">
-              <select name="rent" id="rent" required className="px-4 py-2">
+              <select name="rent" id="rent" className="px-4 py-2">
                 <option value="">RENT</option>
                 <option value="1-bhk">1-bhk</option>
                 <option value="2-bhk">2-bhk</option>
@@ -84,7 +89,11 @@ const Home = ({ onSubmit, result }) => (
                 <option value="4-bhk">4-bhk</option>
                 <option value="5-bhk">5-bhk</option>
               </select>
-              <select name="rent" id="rent" required className="px-4 py-2">
+              <select
+                name="loking space"
+                id="loking space"
+                className="px-4 py-2"
+              >
                 <option value="">Looking Space</option>
                 <option value="1-bhk">1-bhk</option>
                 <option value="2-bhk">2-bhk</option>
@@ -92,7 +101,7 @@ const Home = ({ onSubmit, result }) => (
                 <option value="4-bhk">4-bhk</option>
                 <option value="5-bhk">5-bhk</option>
               </select>
-              <select name="pg" id="pg" required className="px-4 py-2">
+              <select name="pg" id="pg" className="px-4 py-2">
                 <option value="">PG</option>
                 <option value="Private-room">Private-room</option>
                 <option value="Double-sharing">Double-sharing</option>
@@ -741,6 +750,32 @@ const App = () => {
       price: "₹ 15,000",
     },
   ];
+  const item = [
+    {
+      image: img35,
+      title: " Flower Valley",
+      location: "3BHK/4BHK Apartment",
+      price: "2.35Cr",
+    },
+    {
+      image: img36,
+      title: "Ambience Creacions",
+      location: "Sector 22",
+      price: "2Cr",
+    },
+    {
+      image: img37,
+      title: "Silver Glades ",
+      location: "3BHK",
+      price: "1.6Cr",
+    },
+    {
+      image: img38,
+      title: "Orchid",
+      location: "3BHK",
+      price: "3.7Cr",
+    },
+  ];
 
   return (
     <Router>
@@ -797,6 +832,46 @@ const App = () => {
                 <>
                   <div id="home">
                     <Home onSubmit={onSubmit} result={result} />
+                  </div>
+                  <div className="relative w-[80%] mx-auto  pt-16 ">
+                    {/* Left Arrow */}
+                    <button
+                      className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-900 text-white p-2 rounded-full z-10"
+                      onClick={scrollLeft}
+                    >
+                      &#8249;
+                    </button>
+
+                    {/* Carousel Container */}
+                    <h3 className="text-center text-3xl font-bold">
+                      Prime Property for Sale in Gurgaon – Luxury Apartments &
+                      Homes Available
+                    </h3>
+
+                    <div
+                      className="flex space-x-4 overflow-x-auto scrollbar-hide scroll-smooth my-16"
+                      ref={carouselRef}
+                    >
+                      {item.map((items, index) => (
+                        <div key={index} className="flex-shrink-0 w-80">
+                          {/* Adjust width as needed */}
+                          <Kard2
+                            image={items.image}
+                            title={items.title}
+                            location={items.location}
+                            price={items.price}
+                          />
+                        </div>
+                      ))}
+                    </div>
+
+                    {/* Right Arrow */}
+                    <button
+                      className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-900 text-white p-2 rounded-full z-10"
+                      onClick={scrollRight}
+                    >
+                      &#8250;
+                    </button>
                   </div>
                   <div className="relative w-[80%] mx-auto  pt-16 ">
                     {/* Left Arrow */}
